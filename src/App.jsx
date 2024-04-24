@@ -1,4 +1,5 @@
-import "./App.css"
+import "./App.css";
+import Card from "./components/Template.jsx";
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
         paragraph="Corporis quae, aliquid dolores itaque sapiente eum culpa porro. Dolores corrupti ex id quo earum nostrum eos nam!"
       /> 
 
-      < Template
-        icon="bx bx-world"
-        heading="Our Values"
-        paragraph=" Voluptatum itaque eveniet animi excepturi, quae beatae.Incidunt quasi assumenda consequuntur quas blanditiis, labore."
-      /> 
+      <div id="card2">
+        < Template
+          icon="bx bx-world"
+          heading="Our Values"
+          paragraph=" Voluptatum itaque eveniet animi excepturi, quae beatae.Incidunt quasi assumenda consequuntur quas blanditiis, labore."
+        />
+      </div>
 
       < Template
         icon="bx bxs-bank"
@@ -32,11 +35,10 @@ function App() {
   )
 }
 
-
 function Template(props) {
   return (
     <section id="card">
-      <i className={props.icon} style={{fontSize: "5rem",color:"aqua"}}></i>
+      <i className={props.icon} style={{ fontSize: "5rem", color: "aqua", alignSelf:"center" }}></i>
 
       <div>
         <h1>{props.heading}</h1>
