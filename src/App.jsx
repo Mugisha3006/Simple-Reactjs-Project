@@ -1,6 +1,32 @@
 import "./App.css";
 import Card from "./components/Template.jsx";
 
+
+let templatesArray = [
+  {
+    id: 1,
+    icon: "bx bxs-building",
+    title: "About",
+    text: "Corporis quae, aliquid dolores itaque sapiente eum culpa porro. Dolores corrupti ex id quo earum nostrum eos nam!"
+
+  },
+  {
+    id: 2,
+    icon: "bx bx-world",
+    title: "Our Values",
+    text: " Voluptatum itaque eveniet animi excepturi, quae beatae.Incidunt quasi assumenda consequuntur quas blanditiis, labore."
+
+  },
+  {
+    id: 3,
+    icon: "bx bxs-bank",
+    title: "Our Mission",
+    text: "Officia ipsum, molestiae cumque natus fuga expedita eligendi laboriosam non dolores commodi culpa possimus odit!"
+
+  },
+
+]
+
 function App() {
   return (
     <div>
@@ -9,26 +35,12 @@ function App() {
         <p>We specialize in some things ...</p>
       </section>
 
-
-      < Template
-        icon="bx bxs-building"
-        heading="About"
-        paragraph="Corporis quae, aliquid dolores itaque sapiente eum culpa porro. Dolores corrupti ex id quo earum nostrum eos nam!"
-      /> 
-
-      <div id="card2">
-        < Template
-          icon="bx bx-world"
-          heading="Our Values"
-          paragraph=" Voluptatum itaque eveniet animi excepturi, quae beatae.Incidunt quasi assumenda consequuntur quas blanditiis, labore."
-        />
-      </div>
-
-      < Template
-        icon="bx bxs-bank"
-        heading="Our Mission"
-        paragraph="Officia ipsum, molestiae cumque natus fuga expedita eligendi laboriosam non dolores commodi culpa possimus odit!"
-      /> 
+      {
+        templatesArray.map(function (element) {
+          return <Template key={element.id} icon={element.icon} heading={element.title} paragraph={element.text}/>
+        })
+        }
+     
 
     </div>
 
